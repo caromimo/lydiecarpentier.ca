@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'/>
+    <meta name="keywords" content="massothérapie, L'Assomption, Quebec" />
+    <meta name="description" content="" />
+    <title>Lydie Carpentier</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Abel%7CSatisfy' rel='stylesheet' type='text/css' />
+    <link href="./static/stylesheets/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-48120883-2', 'auto');
+ga('send', 'pageview');
+    </script>
+
+  </head>
+
+  <body>
+    <div id="menu">
+      <span class="logo_cursive">Massothérapie Lydie Carpentier</span>
+    <ul>
+      <li>
+
+        <a href="index.html">ACCUEIL</a>
+
+      </li>
+      <li>
+
+        <a href="services.html">SERVICES</a>
+
+      </li>
+      <li>
+
+        <a href="ateliers.html">ATELIERS</a>
+
+      </li>
+      <li>
+
+        <a href="cds.html">CDs</a>
+
+      </li>
+      <li>
+
+        <a href="apropos.html">À PROPOS</a>
+
+      </li>
+      <li>
+
+        <a href="contact.html" class= "active">CONTACT</a>
+
+      </li>
+    </ul>
+    </div>
+    <div id="wrapper">
+
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+
+      <div id='map'></div>
+
+      <script>
+var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/mikewilliamson.i69ldiji/{z}/{x}/{y}.png', {
+  attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+});
+var map = L.map('map')
+  .addLayer(mapboxTiles)
+  .setView([45.81559337200811, -73.4258955717087], 15);
+
+var marker = L.marker([45.81559337200811, -73.4258955717087]).addTo(map)
+  .bindPopup('<p class="container"><img id="logo_in_map" src=".../static/images/logo.jpg"/></p>')
+      </script>
+
+      <div id="contact_details">
+        &nbsp;
+        <h3 class="no_caps">Pour me rejoindre:</h3>
+        <p>(514) 213-2171<br/>
+        lydiecarpentier@videotron.ca</br>
+        <a target="_blank" href="https://www.facebook.com/massotherapielydiecarpentier">Ma page professionnelle Facebook</a></h3></p>
+        &nbsp;
+        <h3 class="no_caps">Adresse:</h3>
+        <p>613 St-Etienne (au coin d'Hector-Papin)<br/>
+        L'Assomption (Québec)<br/>
+        J5W 1Y4</br>
+        <i>Cliquez <a target="_blank"
+                      href="https://www.google.ca/maps/dir//Rue+Saint+%C3%89tienne+%26+Boulevard+Hector-Papin,+L%27Assomption,+QC+J5W/@45.8152345,-73.4260264,17z/data=!4m13!1m4!3m3!1s0x4cc8e9320b6ef973:0x74b5ca28f8ed8fab!2sRue+Saint+%C3%89tienne+%26+Boulevard+Hector-Papin,+L%27Assomption,+QC+J5W!3b1!4m7!1m0!1m5!1m1!1s0x4cc8e9320b6ef973:0x74b5ca28f8ed8fab!2m2!1d-73.4260264!2d45.8152345?hl=fr">ici</a>
+          si vous souhaitez utiliser Google Maps pour vous rendre</i></p>
+        &nbsp;
+        <h3 class="no_caps">Heures de consultations (sur rendez-vous
+          seulement):</h3>
+        <p>Du lundi au jeudi: 10h00 à 20h30<br/>
+        Le vendredi: 10h00 à 17h00<br/>
+        &nbsp;
+        <h3 class="no_caps">Certificats-cadeaux:</h3>
+        <p>SVP, veuillez appeler pour faire préparer les certificats-cadeaux
+        afin de garantir que quelqu'un pourra vous recevoir. Merci.</p>
+        &nbsp;
+      </div>
+
+    </div>
+
+    <div id="footer" class="page-row">
+      <p>
+      <a target="_blank" href="https://www.facebook.com/massotherapielydiecarpentier"><img id="fb_image" alt="Find us on Facebook"
+                                                                                                         style="border-width:0"
+                                                                                                         src="./static/images/FindUsOnFacebook-100-fr-dark.png"/></a>
+      &nbsp;
+      <a target="_blank" rel="license"
+                         href="http://creativecommons.org/licenses/by/3.0/"><img
+                         alt="Creative Commons License" style="border-width:0"
+                                                        src="./static/images/ccby.png"/></a>
+      </p>
+    </div>
+  </body>
+</html>
