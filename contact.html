@@ -18,7 +18,7 @@
         (i[r].q = i[r].q || []).push(arguments)
       }, i[r].l = 1 * new Date(); a = s.createElement(o),
         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-48120883-2', 'auto');
     ga('send', 'pageview');
@@ -64,21 +64,26 @@
   </div>
   <div id="wrapper">
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 
     <div id='map'></div>
 
     <script>
-      var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mikewilliamson.i69ldiji/{z}/{x}/{y}.png', {
-        attribution: '<a href="https://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+      L.mapbox.accessToken = 'pk.eyJ1IjoibWlrZXdpbGxpYW1zb24iLCJhIjoibzRCYUlGSSJ9.QGvlt6Opm5futGhE5i-1kw';
+
+      var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
+        attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        tileSize: 512,
+        zoomOffset: -1
       });
+
       var map = L.map('map')
         .addLayer(mapboxTiles)
         .setView([45.81559337200811, -73.4258955717087], 15);
 
       var marker = L.marker([45.81559337200811, -73.4258955717087]).addTo(map)
-        .bindPopup('<p class="container"><img id="logo_in_map" src=".../static/images/logo.jpg"/></p>')
+        .bindPopup('<p class="container"><img id="logo_in_map" src="./static/images/logo.jpg"/></p>')
     </script>
 
     <div id="contact_details">
