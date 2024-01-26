@@ -63,29 +63,6 @@
     </ul>
   </div>
   <div id="wrapper">
-
-    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
-
-    <div id='map'></div>
-
-    <script>
-      L.mapbox.accessToken = 'pk.eyJ1IjoibWlrZXdpbGxpYW1zb24iLCJhIjoibzRCYUlGSSJ9.QGvlt6Opm5futGhE5i-1kw';
-
-      var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
-        attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        tileSize: 512,
-        zoomOffset: -1
-      });
-
-      var map = L.map('map')
-        .addLayer(mapboxTiles)
-        .setView([45.81559337200811, -73.4258955717087], 15);
-
-      var marker = L.marker([45.81559337200811, -73.4258955717087]).addTo(map)
-        .bindPopup('<p class="container"><img id="logo_in_map" src="./static/images/logo.jpg"/></p>')
-    </script>
-
     <div id="contact_details">
       &nbsp;
       <h3 class="no_caps">Pour me rejoindre :</h3>
